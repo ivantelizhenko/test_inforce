@@ -1,59 +1,9 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "3",
       "imageUrl": "some url here",
-      "name": "Product name 1",
-      "count": 4,
-      "size": {
-        "width": 50,
-        "height": 50
-      },
-      "weight": "1000g",
-      "comments": [
-        {
-          "id": 1,
-          "productId": 1,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        },
-        {
-          "id": 2,
-          "productId": 1,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "imageUrl": "some url here",
-      "name": "Product name 2",
-      "count": 1,
-      "size": {
-        "width": 200,
-        "height": 200
-      },
-      "weight": "200g",
-      "comments": [
-        {
-          "id": 3,
-          "productId": 2,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        },
-        {
-          "id": 4,
-          "productId": 2,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "imageUrl": "some url here",
-      "name": "Product name 3",
+      "name": "Product name",
       "count": 4,
       "size": {
         "width": 200,
@@ -61,43 +11,8 @@
       },
       "weight": "200g",
       "comments": [
-        {
-          "id": 5,
-          "productId": 3,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        },
-        {
-          "id": 6,
-          "productId": 3,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "imageUrl": "some url here",
-      "name": "Product name 4",
-      "count": 4,
-      "size": {
-        "width": 200,
-        "height": 200
-      },
-      "weight": "200g",
-      "comments": [
-        {
-          "id": 7,
-          "productId": 4,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        },
-        {
-          "id": 8,
-          "productId": 4,
-          "description": "some text here",
-          "date": "14:00 22.08.2021"
-        }
+        "CommentModel",
+        "CommentModel"
       ]
     }
   ]

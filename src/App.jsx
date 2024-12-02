@@ -1,11 +1,12 @@
-import styled from "styled-components";
-import ProductsList from "./components/ProductsList";
-import GlobalStyles from "./styles/GlobalStyles";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { fetchProducts } from "./productsSlice";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
 
-import Spinner from "./components/Spinner";
+import GlobalStyles from "./styles/GlobalStyles";
+import { getProducts } from "./productsSlice";
+
+import ProductsList from "./components/Product/ProductsList";
+import Modal from "./components/Modal/Modal";
 
 const StyledApp = styled.section`
   background: #ffefd58e;
@@ -13,13 +14,15 @@ const StyledApp = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 function App() {
+  const editAddProduct = useSelector((state) => state.products.currentProduct);
   const dispatch = useDispatch();
 
   useEffect(function () {
-    dispatch(fetchProducts());
+    dispatch(getProducts());
   }, []);
 
   return (
@@ -27,6 +30,7 @@ function App() {
       <StyledApp>
         <GlobalStyles />
         <ProductsList />
+        {editAddProduct && <Modal />}
       </StyledApp>
     </>
   );

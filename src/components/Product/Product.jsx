@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import Button from "./Button";
+import Button from "../Button/Button";
+import { useDispatch } from "react-redux";
+import { deleteProduct, setCurrentProduct } from "../../productsSlice";
 
 const StyledProduct = styled.li`
   display: flex;
@@ -38,6 +40,15 @@ const Title = styled.h3`
 
 function Product({ product }) {
   const { name, imageUrl, id } = product;
+  const dispatch = useDispatch();
+
+  function handleEdit() {
+    dispatch(setCurrentProduct(id));
+  }
+
+  function handleDelete() {
+    dispatch(deleteProduct(id));
+  }
 
   return (
     <StyledProduct>
@@ -46,10 +57,10 @@ function Product({ product }) {
         <Title>{name}</Title>
       </DescriptionContainer>
 
-      <Button type="edit" id={id} bgColor="rgba(221, 162, 12, 0.579)">
+      <Button onClick={handleEdit} bgColor="rgba(221, 162, 12, 0.579)">
         Edit
       </Button>
-      <Button type="delete" id={id} bgColor="rgba(214, 27, 27, 0.579)">
+      <Button onClick={handleDelete} bgColor="rgba(214, 27, 27, 0.579)">
         Delete
       </Button>
     </StyledProduct>

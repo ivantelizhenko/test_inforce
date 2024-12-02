@@ -1,4 +1,4 @@
-export async function getProducts() {
+export async function getProductsFromAPI() {
   try {
     const res = await fetch("http://localhost:3000/products");
     if (!res.ok) throw new Error("Fetch was failed");

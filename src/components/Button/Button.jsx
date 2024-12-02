@@ -13,9 +13,9 @@ const StyledButton = styled.button`
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
 `;
 
-function Button({ type, children, bgColor, id }) {
+function Button({ children, bgColor, onClick }) {
   return (
-    <StyledButton className={"btn " + type} data-id={id} color={bgColor}>
+    <StyledButton color={bgColor} onClick={onClick}>
       {children}
     </StyledButton>
   );
